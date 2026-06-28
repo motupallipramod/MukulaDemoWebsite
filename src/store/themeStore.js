@@ -2,7 +2,7 @@ import { create } from 'zustand';
 
 export const useThemeStore = create((set) => {
   const savedTheme = localStorage.getItem('theme-preference');
-  const isDarkMode = savedTheme !== null ? JSON.parse(savedTheme) : true;
+  const isDarkMode = savedTheme !== null ? JSON.parse(savedTheme) : false;
 
   // Set the initial theme class on HTML element
   if (isDarkMode) {
